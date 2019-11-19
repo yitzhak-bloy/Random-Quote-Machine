@@ -9,12 +9,20 @@ class QuoteMachine extends Component {
       QuoteText: "",
       QuoteAuthor: ""
     };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
     const rendum = this.state.collections[Math.floor(Math.random()*10)]
     this.setState({
-      collections: QUOTE_DATA,
+      QuoteText: rendum.text,
+      QuoteAuthor: rendum.author
+    })
+  }
+
+  handleClick() {
+    const rendum = this.state.collections[Math.floor(Math.random()*10)]
+    this.setState({
       QuoteText: rendum.text,
       QuoteAuthor: rendum.author
     })
@@ -26,7 +34,7 @@ class QuoteMachine extends Component {
         <div id="quote-box">
           <h2 id="text">{this.state.QuoteText}</h2>
           <h3 id="author">{this.state.QuoteAuthor}</h3>
-          <button id="new-quote">
+          <button id="new-quote" onClick={this.handleClick} >
             !ציטוט חדש
           </button>
           <a id="tweet-quote" href='"twitter.com/intent/tweet"'>
