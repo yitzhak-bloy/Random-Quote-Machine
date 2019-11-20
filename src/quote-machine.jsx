@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import QUOTE_DATA from './quote-data';
+import './quote-machine.css';
 
 class QuoteMachine extends Component {
   constructor(props) {
@@ -31,16 +32,16 @@ class QuoteMachine extends Component {
   render() {
     const { QuoteText, QuoteAuthor } = this.state;
     return (
-      <div>
         <div id="quote-box">
           <h2 id="text">{QuoteText}</h2>
           <h3 id="author">{QuoteAuthor}</h3>
           <button id="new-quote" onClick={this.handleClick} >
             !ציטוט חדש
           </button>
-          <a className="twitter-share-button" href={`https://twitter.com/intent/tweet?text=${QuoteText}--${QuoteAuthor}`}>Tweet</a>
+          <a id="tweet-quote" className="twitter-share-button" href={`https://twitter.com/intent/tweet?text=${QuoteText}--${QuoteAuthor}`}>
+            Tweet
+          </a>
         </div>
-      </div>
     )
   }
 }

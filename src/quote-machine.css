@@ -1,0 +1,21 @@
+.quote-box {
+    display: flex;
+    text-align: center;
+    /* width: 100%;
+    height: 100vh; */
+    background-color: aquamarine;
+}
+
+.text {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.author {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+
