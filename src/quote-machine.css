@@ -1,21 +1,30 @@
-.quote-box {
+#quote-box {
+    background-color: #DFDBE5;
+    width: 50vw;
+    height: 20vw;
+    font-size: 1.5vw;
+    /* margin: 0 auto; */
+    border: 1.5px solid #9383AA;
+    border-radius: 15px;
+    color: #5f5969; 
     display: flex;
-    text-align: center;
-    /* width: 100%;
-    height: 100vh; */
-    background-color: aquamarine;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.text {
+#text {
     display: flex;
     text-align: center;
+}
+
+#author {
+    margin-top: 0%;
+    display: flex;
     justify-content: center;
 }
 
-.author {
+#buttonAndA {
     display: flex;
-    text-align: center;
-    justify-content: center;
+    justify-content: space-around;
+    margin-bottom: 2vh;
 }
-
-

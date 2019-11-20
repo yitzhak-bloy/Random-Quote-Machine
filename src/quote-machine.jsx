@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import QUOTE_DATA from './quote-data';
 import './quote-machine.css';
+import QUOTE_DATA from './quote-data';
 
 class QuoteMachine extends Component {
   constructor(props) {
@@ -28,19 +28,21 @@ class QuoteMachine extends Component {
       QuoteAuthor: rendum.author
     })
   }
-
+  // style={{backgroundColor: 'antiquewhite'}}
   render() {
     const { QuoteText, QuoteAuthor } = this.state;
     return (
-        <div id="quote-box">
+        <div id="quote-box"  >
           <h2 id="text">{QuoteText}</h2>
           <h3 id="author">{QuoteAuthor}</h3>
-          <button id="new-quote" onClick={this.handleClick} >
-            !ציטוט חדש
-          </button>
-          <a id="tweet-quote" className="twitter-share-button" href={`https://twitter.com/intent/tweet?text=${QuoteText}--${QuoteAuthor}`}>
-            Tweet
-          </a>
+          <div id="buttonAndA" >
+            <a id="tweet-quote" className="twitter-share-button" href={`https://twitter.com/intent/tweet?text=${QuoteText}--${QuoteAuthor}`}>
+              Tweet
+            </a>
+            <button id="new-quote" onClick={this.handleClick} >
+              !ציטוט חדש
+            </button>
+          </div>
         </div>
     )
   }
