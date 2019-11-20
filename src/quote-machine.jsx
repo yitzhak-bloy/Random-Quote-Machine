@@ -29,17 +29,16 @@ class QuoteMachine extends Component {
   }
 
   render() {
+    const { QuoteText, QuoteAuthor } = this.state;
     return (
       <div>
         <div id="quote-box">
-          <h2 id="text">{this.state.QuoteText}</h2>
-          <h3 id="author">{this.state.QuoteAuthor}</h3>
+          <h2 id="text">{QuoteText}</h2>
+          <h3 id="author">{QuoteAuthor}</h3>
           <button id="new-quote" onClick={this.handleClick} >
             !ציטוט חדש
           </button>
-          <a id="tweet-quote" href='"twitter.com/intent/tweet"'>
-          twitter
-          </a>
+          <a className="twitter-share-button" href={`https://twitter.com/intent/tweet?text=${QuoteText}--${QuoteAuthor}`}>Tweet</a>
         </div>
       </div>
     )
