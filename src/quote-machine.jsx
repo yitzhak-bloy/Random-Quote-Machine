@@ -28,7 +28,6 @@ class QuoteMachine extends Component {
       QuoteAuthor: rendum.author
     })
   }
-  // style={{backgroundColor: 'antiquewhite'}}
   render() {
     const { QuoteText, QuoteAuthor } = this.state;
     return (
@@ -40,7 +39,7 @@ class QuoteMachine extends Component {
               Tweet
             </a>
             <button id="new-quote" onClick={this.handleClick} >
-              !ציטוט חדש
+              ציטוט חדש
             </button>
           </div>
         </div>

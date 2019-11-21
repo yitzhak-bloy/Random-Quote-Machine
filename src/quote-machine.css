@@ -1,12 +1,11 @@
 #quote-box {
-    background-color: #DFDBE5;
+    background-color: rgba(223, 219, 229, 0.4);
     width: 50vw;
     height: 20vw;
     font-size: 1.5vw;
-    /* margin: 0 auto; */
     border: 1.5px solid #9383AA;
     border-radius: 15px;
-    color: #5f5969; 
+    color: #3d3944; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
