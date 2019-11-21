@@ -27,3 +27,25 @@
     justify-content: space-around;
     margin-bottom: 2vh;
 }
+
+#tweet-quote {
+    background-image: url(\image\twitter.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 5vh;
+}
+
+#new-quote {
+    background-color: rgba(223, 219, 229, 0.8);
+    font-size: 20px;
+    border-radius: 12px;
+    border: 0px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.2s;
+    cursor: pointer;
+    width: 8vw;
+}
+
+#new-quote:hover {
+    background-color: rgba(223, 219, 229, 1); /* Green */
+  }

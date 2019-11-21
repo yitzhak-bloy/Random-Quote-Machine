@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './quote-machine.css';
 import QUOTE_DATA from './quote-data';
+import  './image/twitter.png';
+// import { ReactComponent as twitter } from '.image/twitter.svg';
 
 class QuoteMachine extends Component {
   constructor(props) {
@@ -28,6 +30,7 @@ class QuoteMachine extends Component {
       QuoteAuthor: rendum.author
     })
   }
+
   render() {
     const { QuoteText, QuoteAuthor } = this.state;
     return (
@@ -35,8 +38,8 @@ class QuoteMachine extends Component {
           <h2 id="text">{QuoteText}</h2>
           <h3 id="author">{QuoteAuthor}</h3>
           <div id="buttonAndA" >
-            <a id="tweet-quote" className="twitter-share-button" href={`https://twitter.com/intent/tweet?text=${QuoteText}--${QuoteAuthor}`}>
-              Tweet
+            <a id="tweet-quote" className="twitter-share-button" href={`https://twitter.com/intent/tweet?text=${QuoteText}--${QuoteAuthor}`} >
+              <img src="twitter.png" alt="twitter" width='10px' height='10px' />       
             </a>
             <button id="new-quote" onClick={this.handleClick} >
               ציטוט חדש
