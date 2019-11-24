@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import './quote-machine.css';
 import QUOTE_DATA from './quote-data';
 import  './image/twitter.png';
-// import { ReactComponent as twitter } from '.image/twitter.svg';
 
 class QuoteMachine extends Component {
   constructor(props) {
     super(props);
     this.state = {
       collections: QUOTE_DATA,
-      QuoteText: "",
-      QuoteAuthor: ""
+      quote: {
+        text: '',
+        author: ''
+      }
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -18,27 +19,31 @@ class QuoteMachine extends Component {
   componentDidMount() {
     const rendum = this.state.collections[Math.floor(Math.random()*10)]
     this.setState({
-      QuoteText: rendum.text,
-      QuoteAuthor: rendum.author
+      quote: {
+        text: rendum.text,
+        author: rendum.author
+      }
     })
   }
 
   handleClick() {
     const rendum = this.state.collections[Math.floor(Math.random()*10)]
     this.setState({
-      QuoteText: rendum.text,
-      QuoteAuthor: rendum.author
+      quote: {
+        text: rendum.text,
+        author: rendum.author
+      }
     })
   }
 
   render() {
-    const { QuoteText, QuoteAuthor } = this.state;
+    const { quote } = this.state;
     return (
         <div id="quote-box"  >
-          <h2 id="text">{QuoteText}</h2>
-          <h3 id="author">{QuoteAuthor}</h3>
+          <h2 id="text">{quote.text}</h2>
+          <h3 id="author">{quote.author}</h3>
           <div id="buttonAndA" >
-            <a id="tweet-quote" className="twitter-share-button" href={`https://twitter.com/intent/tweet?text=${QuoteText}--${QuoteAuthor}`} >
+            <a id="tweet-quote" className="twitter-share-button" href={`https://twitter.com/intent/tweet?text=${quote.text}--${quote.author}`} >
               <img src="twitter.png" alt="twitter" width='10px' height='10px' />       
             </a>
             <button id="new-quote" onClick={this.handleClick} >
