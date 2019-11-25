@@ -39,7 +39,7 @@ class QuoteMachine extends Component {
   render() {
     const { quote } = this.state;
     return (
-        <div id="quote-box"  >
+        <div id="quote-box" >
           <h2 id="text">{quote.text}</h2>
           <h3 id="author">{quote.author}</h3>
           <div id="buttonAndA" >
