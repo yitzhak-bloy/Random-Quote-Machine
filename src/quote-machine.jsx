@@ -17,7 +17,7 @@ class QuoteMachine extends Component {
   }
 
   componentDidMount() {
-    const rendum = this.state.collections[Math.floor(Math.random()*10)]
+    const rendum = this.state.collections[Math.floor(Math.random()*this.state.collections.length)]
     this.setState({
       quote: {
         text: rendum.text,
@@ -27,7 +27,7 @@ class QuoteMachine extends Component {
   }
 
   handleClick() {
-    const rendum = this.state.collections[Math.floor(Math.random()*10)]
+    const rendum = this.state.collections[Math.floor(Math.random()*this.state.collections.length)]
     this.setState({
       quote: {
         text: rendum.text,
