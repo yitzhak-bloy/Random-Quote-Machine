@@ -7,10 +7,6 @@ import { setCurrentQuote } from './redux/quote.actions'
 
 
 class QuoteMachine extends Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
 
   componentDidMount() {
     const rendum = QUOTE_DATA[Math.floor(Math.random()*QUOTE_DATA.length)]
@@ -20,7 +16,7 @@ class QuoteMachine extends Component {
       })
   }
 
-  handleClick() {
+  handleClick = ()  => {
     const rendum = QUOTE_DATA[Math.floor(Math.random()*QUOTE_DATA.length)]
     this.props.setCurrentQuote({
       text: rendum.text,
