@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import './quote-machine.css';
 import QUOTE_DATA from './quote-data';
 import  './image/twitter.png';
+
 
 class QuoteMachine extends Component {
   constructor(props) {
     super(props);
     this.state = {
       collections: QUOTE_DATA,
-      quote: {
-        text: '',
-        author: ''
-      }
+
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -37,7 +36,7 @@ class QuoteMachine extends Component {
   }
 
   render() {
-    const { quote } = this.state;
+    const { quote } = this.props;
     return (
         <div id="quote-box" >
           <h2 id="text">{quote.text}</h2>
@@ -55,4 +54,8 @@ class QuoteMachine extends Component {
   }
 }
 
-export default QuoteMachine;
+const mapStateToProps = state => ({
+      quote: state.quote
+});
+
+export default connect(mapStateToProps)(QuoteMachine);
