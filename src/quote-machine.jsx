@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import './quote-machine.css';
 import QUOTE_DATA from './quote-data';
-import  './image/twitter.png';
+import  './image/iconfinder_twitter_173834.png';
 import { setCurrentQuote } from './redux/quote.actions'
 
 
@@ -32,7 +32,7 @@ class QuoteMachine extends Component {
         <h3 id="author">{quote.author}</h3>
         <div id="buttonAndA" >
           <a id="tweet-quote" className="twitter-share-button" href={`https://twitter.com/intent/tweet?text=${quote.text}--${quote.author}`} >
-            <img src="twitter.png" alt="twitter" width='10px' height='10px' />       
+            ציוץ
           </a>
           <button id="new-quote" onClick={this.handleClick} >
             ציטוט חדש
