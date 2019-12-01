@@ -5,15 +5,14 @@ import QUOTE_DATA from './quote-data';
 import  './image/iconfinder_twitter_173834.png';
 import { setCurrentQuote } from './redux/quote.actions'
 
-
 class QuoteMachine extends Component {
 
   componentDidMount() {
     const rendum = QUOTE_DATA[Math.floor(Math.random()*QUOTE_DATA.length)]
-      this.props.setCurrentQuote({
-        text: rendum.text,
-        author: rendum.author
-      })
+    this.props.setCurrentQuote({
+      text: rendum.text,
+      author: rendum.author
+    })
   }
 
   handleClick = ()  => {
