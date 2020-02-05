@@ -1,7 +1,14 @@
-This is Random Quote Machine, built as part of the [five freeCodeCamp projects](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/) to receive the Front End Libraries certificate.
+# Random Quote Machine
 
+My project for the [Build a Random Quote Machine challenge](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-random-quote-machine) as part of the curriculum for the Front End Libraries Certification on [freeCodeCamp](https://www.freecodecamp.org/). 
 The quotes are in Hebrew.
 
-The project was built in React and redux.
+## Built With
+- HTML5
+- css
+- JavaScript
+- [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
 
-The app can be viewed [here](https://yitzhak-bloy.github.io/Random-Quote-Machine/).
+## Demo
+View project demo at https://yitzhak-bloy.github.io/Random-Quote-Machine/.
